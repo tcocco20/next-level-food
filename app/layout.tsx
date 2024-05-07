@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import clsx from "clsx";
+import MainHeader from "@/components/MainHeader";
 
 export const metadata: Metadata = {
   title: {
@@ -58,6 +59,7 @@ export default function RootLayout({
               ></path>
             </svg>
           </div>
+          <MainHeader />
           <div className="relative flex flex-col h-screen">{children}</div>
         </Providers>
       </body>
