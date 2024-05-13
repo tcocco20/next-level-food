@@ -4,6 +4,7 @@ import { Image } from "@nextui-org/image";
 import logoImg from "@/assets/logo.png";
 import classes from "./main-header.module.css";
 import MainHeaderBackground from "./MainHeaderBackground";
+import NavLink from "./NavLink";
 
 const MainHeader = () => {
   return (
@@ -16,12 +17,8 @@ const MainHeader = () => {
         </Link>
         <nav className={classes.nav}>
           <ul>
-            <li>
-              <Link href="/meals">Browse Meals</Link>
-            </li>
-            <li>
-              <Link href="/community">Foodies Community</Link>
-            </li>
+            <NavLink href="/meals">Browse Meals</NavLink>
+            <NavLink href="/community">Foodies Community</NavLink>
           </ul>
         </nav>
       </header>

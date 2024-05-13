@@ -40,7 +40,7 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <MainHeader />
-          <div className="relative flex flex-col h-screen">{children}</div>
+          <div className="relative flex flex-col">{children}</div>
         </Providers>
       </body>
     </html>
