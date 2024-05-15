@@ -1,14 +1,6 @@
+import { Meal } from "@/lib/meals";
 import MealItem from "./MealItem";
 import classes from "./MealsGrid.module.css";
-
-interface Meal {
-  id: string;
-  title: string;
-  slug: string;
-  image: string;
-  summary: string;
-  creator: string;
-}
 
 interface MealsGridProps {
   meals: Meal[];
