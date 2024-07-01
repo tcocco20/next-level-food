@@ -1,4 +1,6 @@
 import sql from "better-sqlite3";
+import slugify from "slugify";
+import xss from "xss";
 
 const db = sql("meals.db");
 
@@ -20,4 +22,9 @@ export async function getMeals(): Promise<Meal[]> {
 
 export function getMeal(slug: string): Meal {
   return db.prepare("SELECT * FROM meals WHERE slug = ?").get(slug) as Meal;
+}
+
+export function saveMeal(meal: Meal) {
+  meal.slug = slugify(meal.title, { lower: true });
+  meal.instructions = xss(meal.instructions);
 }
