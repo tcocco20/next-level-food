@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Providers } from "./providers";
 import clsx from "clsx";
 import MainHeader from "@/components/main-header/MainHeader";
 
@@ -38,10 +37,8 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <MainHeader />
-          <div className="relative flex flex-col">{children}</div>
-        </Providers>
+        <MainHeader />
+        <div className="relative flex flex-col">{children}</div>
       </body>
     </html>
   );
